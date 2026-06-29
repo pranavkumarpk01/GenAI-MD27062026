@@ -15,6 +15,34 @@ _address = "123 Main St"  # Valid variable name
 #4 Variable names are case-sensitive.
 name ="Alice"  # Valid variable name
 Name ="Bob"  # Valid variable name (different from 'name')
+NAME ="Charlie"  # Valid variable name (different from 'name' and 'Name')
 
 print(name)  # Output: Alice
 print(Name)  # Output: Bob
+print(NAME)  # Output: Charlie
+
+#5 Do not use Python Keywords as Variable name.
+if = 10
+for = "Pranav"
+class = 10
+True = False
+
+#Python keywords are if , else, for, while, class, def, return, import, True , False, None...
+
+#6.Avoid spaces in variable names
+student name ="John"
+#can do in this way if required
+student_name = "John"
+studnetname = "John"
+
+#7 Always choose meaningful varible names
+a = 20
+b = 50000
+
+age = 20
+salary = 50000
+
+#8.Follow Python naming convention(Snake Case)
+student_name = "Pranav"
+total_marks = 450
+phone_number = "9432445032"
