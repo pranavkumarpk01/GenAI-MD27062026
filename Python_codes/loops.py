@@ -34,11 +34,38 @@
 # i= 6,    6<=5 -> no your loop will break
 
 #Password Retry
-password = "python123"
-user = " "
-while user != password:
-     user = input("Enter Password: ")
+# password = "python123"
+# user = " "
+# while user != password:
+#      user = input("Enter Password: ")
 
-print("Access Granted")
+# print("Access Granted")
 
 #write a program for ATM pin verification 
+
+#Difference between while and for loop
+# Fearture         forloop.                 whileloop
+# Iteration.         nown                    unknown
+# condtion.       range or sequence.         pure condtion based
+# Intialisation    Automatic                 Manually
+# update            Automatic                Logically
+# infinite loop      low                     high
+# Best use          Fixed no of repetations. condition driven repetition
+
+#Nested loops , continue , break , pass
+#keywords -> Research and try to understand wat does continue, break and pass does.
+
+# Nested loop -> You define one loop inside another loop.
+
+# for i in range(3):
+#     for j in range(2):
+#         print(i,j)
+
+#first the execution will start togehter and then post execution the inner loop will complete its fucntionality and then again it will go to outer loop
+
+for i in range(4):
+    for j in range(4):
+        print("*",end=" ")
+    print()    
+
+#end() will help u to go to end of the line
