@@ -22,5 +22,7 @@ std.display_name()
 std.display_age()
 std.display_marks()
 
+
 emp.employee_name()
 emp.salary()
+
