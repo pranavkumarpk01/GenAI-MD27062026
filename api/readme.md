@@ -1,28 +1,26 @@
-fastapi ->Framework to run your python application
-uvicorn -> helps you to run your application at desired port and also pops up swagger to test your apis
-pip install -r requirements.txt is useful to install all the libraries
+markdown_content = """# FastAPI & MongoDB Cheat Sheet
 
-Inorder to setup Mongodb database 
-steps to follow
-1. Install docker(chatgpt ) -> use cli to install docker 
-2. docker pull mongo
-3. docker run -d \
---name mongodb \
--p 27017:27017 \
--e MONGO_INITDB_ROOT_USERNAME=admin \
--e MONGO_INITDB_ROOT_PASSWORD=password \
-mongo
-4. docker ps  
-to vaildate is your docker contianer of mongo up and running
+A well-structured reference guide for setting up a FastAPI application and configuring a MongoDB database using Docker.
 
-#you will create a database -> collections(tables) both are same functionality but different nam
+---
 
-By default mongo db creates or works with the data in the format of dictornary
+## 🚀 Core Web Framework & Server
 
-insert_one is an inbuilt function from mongodb which will help u to ingest the data into the db
+*   **FastAPI**: The core Python framework used to build your application and web APIs.
+*   **Uvicorn**: The ASGI server that runs your FastAPI application at a desired port. It also exposes the built-in **Swagger UI** (interactive documentation) to visually test your APIs.
+*   **Dependency Management**: 
+    ```bash
+    pip install -r requirements.txt
+    ```
+    Use this command to quickly install all required libraries listed in your project.
 
-Inorder to run your application
-uvicorn app:app --reload
+---
 
+## 🐳 Setting Up MongoDB via Docker
 
-Whenever you create a record in db, by default mongodb will create a object id for u .
+Follow these sequential steps to get your MongoDB database up and running in an isolated container environment:
+
+1. **Install Docker**: Download and install Docker Desktop or use your system's Command Line Interface (CLI) to set it up.
+2. **Pull the Official Mongo Image**: Download the latest MongoDB image from Docker Hub.
+   ```bash
+   docker pull mongo
