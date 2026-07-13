@@ -41,21 +41,21 @@
 # so u no need to use multiple if-elif block conditions, you can just use match case  to make the code
 # more cleaner and easier to read. 
 
-num1 = int(input("Enter first number:"))
-num2 = int(input("Enter Second number:"))
-operator = input("Enter operator (+,-,*,%):")
+# num1 = int(input("Enter first number:"))
+# num2 = int(input("Enter Second number:"))
+# operator = input("Enter operator (+,-,*,%):")
 
-match operator:
-   case "+":
-       print("Result =" , num1 + num2)
-   case "-":
-       print("Result =", num1 - num2)
-   case "*":
-       print("Result *", num1 * num2)
-   case "%":
-       print("Result %", num1 % num2)
-   case "_":
-       print("Invalid operator")                
+# match operator:
+#    case "+":
+#        print("Result =" , num1 + num2)
+#    case "-":
+#        print("Result =", num1 - num2)
+#    case "*":
+#        print("Result *", num1 * num2)
+#    case "%":
+#        print("Result %", num1 % num2)
+#    case "_":
+#        print("Invalid operator")                
 
 # if-elif best for conitions and ranges , switch it is best used for matching fixed values        
 # if-elif u can use for complex expressions, Matches specific patterns

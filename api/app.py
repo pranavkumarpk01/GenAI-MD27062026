@@ -31,3 +31,30 @@ def create_student(student: dict):
       "message":"student created",
       "id": str(result.inserted_id)
    }
+
+@app.put("/students/{student_id}")
+def update_student(student_id:str , student:dict):
+   result = collection.update_one(
+      {"_id":ObjectId(student_id)},
+      {"$set":student}
+   )
+
+   if result.modified_count == 0:
+      raise HTTPException(status_code=404 , detail="Student not found")
+   
+   return{
+      "message":"Student updated"
+   }
+
+@app.delete("/students/{student_id}")
+def delete_student(student_id:str):
+   result = collection.delete_one(
+      {"_id": ObjectId(student_id)}
+   )
+
+   if result.deleted_count == 0:
+      raise HTTPException(status_code=404 , detail="Student not found")
+   
+   return{
+      "message":"Student deleted"
+   }
