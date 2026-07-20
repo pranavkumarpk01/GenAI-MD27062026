@@ -1,9 +1,3 @@
-.venv
-../.DS_Store
-.DS_Store
-pranav
-.vscode
-_pycache_
 api/__pycache__/app.cpython-312.pyc
 Rag/utils/__pycache__/loader.cpython-312.pyc
-qdrant_storage/
+utils/__pycache__

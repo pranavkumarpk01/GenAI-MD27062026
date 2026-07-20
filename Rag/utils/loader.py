@@ -10,3 +10,6 @@ def load_pdf(file_path: str) -> str:
             text += f"\n--- Page {page_number + 1} --\n"
             text+= extracted
     return text        
+
+
+

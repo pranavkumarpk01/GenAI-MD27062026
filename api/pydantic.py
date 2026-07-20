@@ -1,6 +1,6 @@
-from pydantic import BaseModel
+# from pydantic import BaseModel
 
-class Verify (BaseModel):
-    name:str
-    age:int
-    city:str
+# class Verify (BaseModel):
+#     name:str
+#     age:int
+#     city:str
