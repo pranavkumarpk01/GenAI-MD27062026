@@ -1,0 +1,9 @@
+langchain
+langchain-classic
+langchain-google-genai
+langchain-community
+langgraph
+python-dotenv
+openai
+requests
+pydantic

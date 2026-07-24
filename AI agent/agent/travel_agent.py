@@ -1,5 +1,4 @@
-from langchain.agents import create_tool_calling_agent
-from langchain.agent import AgentExecutor
+from langchain_classic.agents import create_tool_calling_agent, AgentExecutor
 from langchain_core.prompts import ChatPromptTemplate
 from utils.llm import llm
 from tools.weater_tool import get_weather

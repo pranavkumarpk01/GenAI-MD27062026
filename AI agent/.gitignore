@@ -1,0 +1,7 @@
+venv
+AI agent/agent/__pycache__/
+AI agent/agent/__pycache__/
+AI agent/memory/__pycache__/
+AI agent/prompts/__pycache__/
+AI agent/tools/__pycache__/
+AI agent/utils/__pycache__/

@@ -3,6 +3,7 @@ from langchain.tools import tool
 
 @tool
 def search_flights(destination: str):
+    """Returns flight options for the given destination."""
 
     flights = {
 
