@@ -1,13 +1,8 @@
-from langchain_classic.memory import ConversationBufferMemory
+from langchain_community.chat_message_histories import SQLChatMessageHistory
 
-memory = ConversationBufferMemory(
-    memory_key ="chat_history",
-    return_messages=True
-)
+DB_PATH = "sqlite:///chat_memory.db"
 
 
-#user: I want to go to goa
-#AI : Okay.
-
-#Next: Book hotel
-#AI" which city
+def get_session_history(session_id: str) -> SQLChatMessageHistory:
+    """Every session_id gets its own persistent chat history, stored in SQLite."""
+    return SQLChatMessageHistory(session_id=session_id, connection=DB_PATH)

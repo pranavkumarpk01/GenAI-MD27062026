@@ -1,7 +1,13 @@
-venv
-AI agent/agent/__pycache__/
-AI agent/agent/__pycache__/
-AI agent/memory/__pycache__/
-AI agent/prompts/__pycache__/
-AI agent/tools/__pycache__/
-AI agent/utils/__pycache__/
+# venv
+venv/
+.venv/
+
+# secrets
+.env
+
+# local sqlite memory
+*.db
+
+# python cache
+__pycache__/
+*.pyc
