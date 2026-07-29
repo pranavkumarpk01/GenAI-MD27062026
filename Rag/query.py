@@ -1,11 +1,13 @@
+import os
 import yaml
 import requests
 from qdrant_client import QdrantClient
 
 
-#Ollama API endpoints
-OLLAMA_URL = "http://localhost:11434/api/generate"
-EMBED_URL = "http://localhost:11434/api/embeddings"
+#Ollama API endpoints (override with OLLAMA_BASE_URL, e.g. http://host.docker.internal:11434 in Docker)
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+OLLAMA_URL = f"{OLLAMA_BASE_URL}/api/generate"
+EMBED_URL = f"{OLLAMA_BASE_URL}/api/embeddings"
 
 def load_config():
     with open("config.yaml") as f:
@@ -70,10 +72,10 @@ def main():
 
     config = load_config()
 
-    # Connect to Qdrant
+    # Connect to Qdrant (env vars override config.yaml, useful inside Docker)
     client = QdrantClient(
-        host=config["qdrant"]["host"],
-        port=config["qdrant"]["port"]
+        host=os.getenv("QDRANT_HOST", config["qdrant"]["host"]),
+        port=int(os.getenv("QDRANT_PORT", config["qdrant"]["port"]))
     )
 
     # User question

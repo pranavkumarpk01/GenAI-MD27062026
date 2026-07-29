@@ -7,7 +7,9 @@ from utils.chunking import chunk_text
 from utils.embedding import generate_embeddings
 from utils.vectorstore import setup_collection, ingest_chunks
 
-PDF_PATH = "/Users/pranav/Documents/GenAI Feb/Rag/hr_policy_detailed_5_pages.pdf"
+import os
+
+PDF_PATH = os.getenv("PDF_PATH", "hr_policy_detailed_5_pages.pdf")
 
 
 def load_config():
@@ -38,8 +40,8 @@ def main():
 
     print("Connecting Qdrant...")
     client = QdrantClient(
-        host=config["qdrant"]["host"],
-        port=config["qdrant"]["port"]
+        host=os.getenv("QDRANT_HOST", config["qdrant"]["host"]),
+        port=int(os.getenv("QDRANT_PORT", config["qdrant"]["port"]))
     )
 
     setup_collection(

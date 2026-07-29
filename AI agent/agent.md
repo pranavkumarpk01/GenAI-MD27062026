@@ -217,3 +217,59 @@ LangChain 1.0 restructured the library into separate packages:
 - **Multi-agent systems** — one "orchestrator" agent delegates sub-tasks to specialized agents (e.g. a "flights agent," a "hotels agent"), each with its own tools and prompt, coordinated by a top-level planner.
 - **Observability/tracing** (e.g. LangSmith) — logs every Thought/Action/Observation step in production so you can debug *why* an agent made a particular decision, not just see the final output.
 - **Guardrails** — validating tool outputs and LLM outputs before acting on them (e.g. don't let the agent "book" something without a confirmation step), rate limiting, and cost tracking on LLM calls.
+
+
+chat 1 -> summary of chat1 -> 200 words
+chat2 -> summary of chat 1 + chat2 -> 200 words 
+chat3 -> summary of chat 1 + 2 + 3  -> 200 words
+
+#how memory will get stored in the Agent or chatbot
+Response 
+
+      │
+      ▼
+
+Should this be remembered?
+
+      │
+      ▼
+
+Memory Extraction
+
+      │
+      ▼
+
+Convert into Embeddings
+
+      │
+      ▼
+
+Store in Vector Database
+
+#How memory works in an Agent or chatbot
+User Question
+      |
+      |
+      v
++------------------+
+| Memory Search    |
++------------------+
+      |
+Relevant Memories
+      |
+      v
++------------------+
+| Prompt Builder   |
++------------------+
+      |
+Conversation
++
+Relevant Memory
++
+System Prompt
+      |
+      v
+      GPT
+      |
+      v
+ Response

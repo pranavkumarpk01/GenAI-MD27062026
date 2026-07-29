@@ -2,3 +2,4 @@ requests
 langchain-text-splitters
 qdrant-client
 pypdf
+pyyaml
