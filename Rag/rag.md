@@ -2297,3 +2297,18 @@ Key Takeaways:
 ```
 
 Good luck building RAG systems! 🚀
+
+
+
+ollama serve
+
+docker run -d --name qdrant -p 6333:6333 -v "$(pwd)/qdrant_storage:/qdrant/storage" qdrant/qdrant
+
+
+cd Rag
+docker build -t rag-app .
+
+docker run --rm \
+  -e QDRANT_HOST=host.docker.internal \
+  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \
+  rag-app python ingestion.py
